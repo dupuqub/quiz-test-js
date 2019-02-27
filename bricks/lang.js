@@ -36,7 +36,7 @@ project.bricks.lang = inner =>
       [`height`, `calc(var(--u) * 50)`],
       [`position`, `absolute`],
       [`transition`, `all 0.2s`],
-      [`font-size`, `calc(var(--u) * 40)`],
+      [`font-size`, `calc(var(--u) * 30)`],
       [`font-family`, `Montserrat, sans-serif`],
       [`transform`, `translateY(calc(var(--h) / 2 - var(--u) * 25))`],
     ],

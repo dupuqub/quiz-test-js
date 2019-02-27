@@ -8,6 +8,7 @@ project.bricks.scenes.main.brick = () =>
   const lang = dunp.getLang()
   const brick =
   {
+    id: `sceneMain`,
     classes: [`center`, `column`],
     styles:
     [
