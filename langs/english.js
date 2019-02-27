@@ -10,6 +10,6 @@ project.langs.english =
   title: `the QUIZ of ART`,
   pageTitle: [`the &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp QUIZ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp of`, `ART`],
   play: `PLAY`,
-  question: `Who painted this work?`,
+  question: `Who painted this piece?`,
 }
 

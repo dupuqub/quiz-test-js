@@ -7,8 +7,14 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
 {
   const click = () =>
   {
-    const index = event.target.id.slice(-1)
-    console.log(index)
+    const id = event.target.id
+    const index = id.slice(-1)
+    const selected = dunp.get(`#${id}`).innerHTML
+    const questionIndex = project.states.temp.question
+    const correct = project.questions[questionIndex].painters[0]
+
+    if(selected === correct) console.log(`correct`)
+    else console.log(`wrong`)
   }
 
   const brick =
