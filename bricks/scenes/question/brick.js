@@ -2,14 +2,17 @@
 `use strict`
 
 //......................................................................................................................
-// Example.
 
 project.bricks.scenes.question.brick = () =>
 {
+  const arrayOld = [0, 1, 2, 3]
+  const arrayNew = dunp.array.shuffle(arrayOld)
+  const question = project.states.temp.question
+
   const lang = dunp.getLang()
   const brick =
   {
-    classes: [`center`, `column`],
+    classes: [`center`],
     styles:
     [
       [`width`, `100%`],
@@ -19,6 +22,30 @@ project.bricks.scenes.question.brick = () =>
     ],
     inner:
     [
+      [
+        {
+          id: `zoneLeft`,
+          styles:
+          [
+            [`width`, `50%`],
+            [`height`, `100%`],
+            [`background`, `orange`],
+          ],
+          inner: arrayNew.map((item, index) =>
+          {
+            return project.bricks.scenes.question.children.option(item, index, question)
+          }),
+        },
+        {
+          id: `zoneRight`,
+          styles:
+          [
+            [`width`, `50%`],
+            [`height`, `100%`],
+            [`background`, `blue`],
+          ],
+        },
+      ],
       project.bricks.lang(dunp.upper(lang.name)),
     ],
   }

@@ -7,5 +7,6 @@ project.states.temp =
 {
   scene: {},
   stage: {},
+  question: 0,
 }
 

@@ -10,5 +10,6 @@ project.langs.portuguese =
   title: `o QUIZ de ARTE`,
   pageTitle: [`o &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp QUIZ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp de`, `ARTE`],
   play: `JOGAR`,
+  question: `Quem pintou esta obra?`,
 }
 

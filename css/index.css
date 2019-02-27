@@ -29,26 +29,26 @@
 
 /*....................................................................................................................*/
 
-#titleMajor{animation: grow 1s ease}
+#titleMajor{animation: slideUp 1s ease}
 
-@keyframes grow
+@keyframes slideUp
 {
-  from{font-size: calc(var(--u) * 180)}
-  to{font-size: calc(var(--u) * 200)}
+  from{transform: translateY(calc(var(--u) * 20))}
+  to{transform: translateY(0)}
 }
 
 /*....................................................................................................................*/
 
-#rococoLeft{animation: slideLeft 2s ease-out}
-#rococoRight{animation: slideRight 2s ease-out}
+#rococoLeft{animation: springLeft 2s ease-out}
+#rococoRight{animation: springRight 2s ease-out}
 
-@keyframes slideLeft
+@keyframes springLeft
 {
   0%{transform: translateX(calc(var(--u) * -200))}
   60%{transform: translateX(calc(var(--u) * 10))}
   100%{transform: translateX(0)}
 }
-@keyframes slideRight
+@keyframes springRight
 {
   0%{transform: translateX(calc(var(--u) * 200))}
   60%{transform: translateX(calc(var(--u) * -10))}
