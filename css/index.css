@@ -1,0 +1,74 @@
+
+/*....................................................................................................................*/
+
+.button
+{
+  color: #AAA;
+  background: #FFF;
+}
+
+.button:hover
+{
+  color: #FFF;
+  background: #AAA;
+}
+
+.button:active:not(#lang)
+{
+  color: #FFF;
+  background: #666;
+}
+
+.nonSelect
+{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/*....................................................................................................................*/
+
+#titleMajor{animation: grow 1s ease}
+
+@keyframes grow
+{
+  from{font-size: calc(var(--u) * 180)}
+  to{font-size: calc(var(--u) * 200)}
+}
+
+/*....................................................................................................................*/
+
+#rococoLeft{animation: slideLeft 2s ease-out}
+#rococoRight{animation: slideRight 2s ease-out}
+
+@keyframes slideLeft
+{
+  0%{transform: translateX(calc(var(--u) * -200))}
+  60%{transform: translateX(calc(var(--u) * 10))}
+  100%{transform: translateX(0)}
+}
+@keyframes slideRight
+{
+  0%{transform: translateX(calc(var(--u) * 200))}
+  60%{transform: translateX(calc(var(--u) * -10))}
+  100%{transform: translateX(0)}
+}
+
+/*....................................................................................................................*/
+
+.fadein{animation: fadein 2s ease}
+.fadeout{animation: fadeout 0.5s ease}
+
+@keyframes fadein
+{
+  from{opacity: 0}
+  to{opacity: 100%}
+}
+
+@keyframes fadeout
+{
+  from{opacity: 100%}
+  to{opacity: 0}
+}
+
