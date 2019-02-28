@@ -22,7 +22,6 @@ project.bricks.scenes.main.brick = () =>
       {
         id: `titleBox`,
         classes: [`center`, `fadein`],
-        styles: [[`margin-bottom`, `calc(var(--u) * 150)`]],
         inner:
         [
           project.bricks.rococo(`left`, 80, 50),
