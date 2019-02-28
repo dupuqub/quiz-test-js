@@ -37,7 +37,7 @@ project.bricks.scenes.main.brick = () =>
         ],
       },
       project.bricks.scenes.main.children.play(lang.play),
-      project.bricks.lang(lang.name, true),
+      project.bricks.lang(lang.name),
     ],
   }
 

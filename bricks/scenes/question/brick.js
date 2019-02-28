@@ -97,7 +97,7 @@ project.bricks.scenes.question.brick = () =>
           },
         ],
       },
-      project.bricks.lang(lang.name, false),
+      project.bricks.lang(lang.name),
     ],
   }
 
