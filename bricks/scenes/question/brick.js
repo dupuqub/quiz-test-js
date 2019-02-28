@@ -69,7 +69,7 @@ project.bricks.scenes.question.brick = () =>
                   styles:
                   [
                     [`width`, `calc(var(--u) * 600)`],
-                    [`height`, `calc(var(--u) * 400)`],
+                    [`height`, `calc(var(--u) * 500)`],
                     [`background-image`, `url(${question.link})`],
                     [`background-repeat`, `no-repeat`],
                     [`background-position`, question.position],
