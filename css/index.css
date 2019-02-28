@@ -27,6 +27,12 @@
   -ms-user-select: none;
 }
 
+.selected
+{
+  border: 10px solid orange;
+  box-sizing: border-box;
+}
+
 /*....................................................................................................................*/
 
 #titleMajor{animation: slideUp 1s ease}
