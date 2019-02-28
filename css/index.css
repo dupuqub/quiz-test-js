@@ -1,22 +1,22 @@
 
 /*....................................................................................................................*/
 
+#preloads{display: none}
+#play{display: none}
+
+/*....................................................................................................................*/
+
 .button
 {
   color: #AAA;
   background: #FFF;
+  cursor: pointer;
 }
 
 .button:hover
 {
   color: #FFF;
   background: #AAA;
-}
-
-.button:active:not(#lang)
-{
-  color: #FFF;
-  background: #666;
 }
 
 .nonSelect
@@ -33,7 +33,7 @@
 
 @keyframes slideUp
 {
-  from{transform: translateY(calc(var(--u) * 20))}
+  from{transform: translateY(calc(var(--u) * 40))}
   to{transform: translateY(0)}
 }
 

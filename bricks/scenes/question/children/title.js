@@ -14,6 +14,18 @@ project.bricks.scenes.question.children.title = question =>
     [`font-size`, `calc(var(--u) * 70)`],
     [`font-family`, `Playfair Display, serif`],
   ],
-  inner: question,
+  inner:
+  [
+    project.bricks.rococo(`left`, 50, 0),
+    {
+      styles:
+      [
+        [`margin-left`, `calc(var(--u) * 70)`],
+        [`margin-right`, `calc(var(--u) * 70)`],
+      ],
+      inner: question,
+    },
+    project.bricks.rococo(`right`, 50, 0),
+  ],
 })
 

@@ -24,7 +24,6 @@ project.bricks.scenes.question.brick = () =>
     ],
     inner:
     [
-      project.bricks.lang(dunp.upper(lang.name)),
       project.bricks.scenes.question.children.title(lang.question),
       {
         id: `zoneBox`,
@@ -32,7 +31,7 @@ project.bricks.scenes.question.brick = () =>
         styles:
         [
           [`width`, `100%`],
-          [`height`, `80%`],
+          [`height`, `calc(80% - var(--u) * 50)`],
         ],
         inner:
         [
@@ -41,7 +40,6 @@ project.bricks.scenes.question.brick = () =>
             classes: [`center`, `column`],
             styles:
             [
-              [`justify-content`, `flex-start`],
               [`width`, `50%`],
               [`height`, `100%`],
             ],
@@ -52,15 +50,54 @@ project.bricks.scenes.question.brick = () =>
           },
           {
             id: `zoneRight`,
-            classes: [`center`, `column`],
+            classes: [`center`],
             styles:
             [
               [`width`, `50%`],
               [`height`, `100%`],
+              [`justify-content`, `flex-start`],
             ],
+            inner:
+            {
+              id: `zoneRightBox`,
+              classes: [`center`, `column`],
+              inner:
+              [
+                {
+                  id: `image`,
+                  classes: [`fadein`],
+                  styles:
+                  [
+                    [`width`, `calc(var(--u) * 600)`],
+                    [`height`, `calc(var(--u) * 400)`],
+                    [`background-image`, `url(${question.link})`],
+                    [`background-repeat`, `no-repeat`],
+                    [`background-position`, question.position],
+                    [`background-size`, `cover`],
+                    [`border-radius`, `calc(var(--u) * 90)`],
+                    [`margin-bottom`, `calc(var(--u) * 50)`],
+                  ],
+                },
+                {
+                  id: `confirm`,
+                  classes: [`center`, `button`, `nonSelect`, `fadein`],
+                  styles:
+                  [
+                    [`width`, `calc(var(--u) * 600)`],
+                    [`height`, `calc(var(--u) * 180)`],
+                    [`border-radius`, `calc(var(--u) * 100)`],
+                    [`transition`, `all 0.2s`],
+                    [`font-size`, `calc(var(--u) * 40)`],
+                    [`font-family`, `Montserrat, sans-serif`],
+                  ],
+                  inner: lang.confirm,
+                },
+              ],
+            },
           },
         ],
       },
+      project.bricks.lang(lang.name, false),
     ],
   }
 

@@ -3,7 +3,7 @@
 
 //......................................................................................................................
 
-project.bricks.lang = inner =>
+project.bricks.lang = (inner, absolute) =>
 {
   const click = () =>
   {
@@ -28,17 +28,17 @@ project.bricks.lang = inner =>
   const brick =
   {
     id: `lang`,
-    classes: [`center`, `pointer`, `button`, `fadein`, `nonSelect`],
+    classes: [`center`, `button`, `nonSelect`, `fadein`],
     extras: [[`onclick`, dunp.trigger(click)]],
     styles:
     [
       [`width`, `100%`],
       [`height`, `calc(var(--u) * 50)`],
-      [`position`, `absolute`],
       [`transition`, `all 0.2s`],
       [`font-size`, `calc(var(--u) * 30)`],
       [`font-family`, `Montserrat, sans-serif`],
-      [`transform`, `translateY(calc(var(--h) / 2 - var(--u) * 25))`],
+      [`position`, absolute ? `absolute` : `relative`],
+      [`transform`, absolute ? `translateY(calc(var(--h) / 2 - var(--u) * 25))` : `0`],
     ],
     inner,
   }

@@ -19,17 +19,18 @@ project.bricks.scenes.main.children.play = inner =>
   const brick =
   {
     id: `play`,
-    classes: [`center`, `pointer`, `button`, `fadein`, `nonSelect`],
+    classes: [`center`, `button`, `nonSelect`, `fadein`],
     extras: [[`onclick`, dunp.trigger(click)]],
     styles:
     [
-      [`width`, `calc(var(--u) * 200)`],
-      [`height`, `calc(var(--u) * 200)`],
+      [`width`, `calc(var(--u) * 180)`],
+      [`height`, `calc(var(--u) * 180)`],
       [`transition`, `all 0.2s`],
       [`font-size`, `calc(var(--u) * 40)`],
       [`font-family`, `Montserrat, sans-serif`],
-      [`margin-bottom`, `calc(var(--u) * 100)`],
+      [`transform`, `translateY(calc(var(--u) * 250))`],
       [`border-radius`, `50%`],
+      [`position`, `absolute`],
     ],
     inner,
   }

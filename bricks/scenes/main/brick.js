@@ -25,7 +25,7 @@ project.bricks.scenes.main.brick = () =>
         styles: [[`margin-bottom`, `calc(var(--u) * 150)`]],
         inner:
         [
-          project.bricks.scenes.main.children.rococo(`left`),
+          project.bricks.rococo(`left`, 80, 50),
           {
             inner:
             [
@@ -33,11 +33,11 @@ project.bricks.scenes.main.brick = () =>
               project.bricks.scenes.main.children.title(lang.pageTitle[1], true),
             ],
           },
-          project.bricks.scenes.main.children.rococo(`right`),
+          project.bricks.rococo(`right`, 80, 50),
         ],
       },
       project.bricks.scenes.main.children.play(lang.play),
-      project.bricks.lang(dunp.upper(lang.name)),
+      project.bricks.lang(lang.name, true),
     ],
   }
 

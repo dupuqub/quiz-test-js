@@ -7,9 +7,10 @@ project.langs.portuguese =
 {
   id: `portuguese`,
   name: `Português`,
-  title: `o QUIZ de ARTE`,
-  pageTitle: [`o &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp QUIZ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp de`, `ARTE`],
+  title: `o quiz de ARTE`,
+  pageTitle: [`o${dunp.space(8)}QUIZ${dunp.space(8)}de`, `ARTE`],
   play: `JOGAR`,
   question: `Quem pintou esta obra?`,
+  confirm: `CONFIRMO`,
 }
 

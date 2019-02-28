@@ -19,7 +19,10 @@ project.bricks.scenes.main.meta = () =>
 
   beforeOldExit: () => {},
   beforeBuild: () => {},
-  afterBuild: () => {},
+  afterBuild: () =>
+  {
+    setTimeout(() => dunp.get(`#play`).style.display = `flex`, 1000)
+  },
   exit: () => {},
   loop: () => {},
 

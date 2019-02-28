@@ -20,7 +20,7 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
   const brick =
   {
     id: `option${index}`,
-    classes: [`center`, `pointer`, `button`, `fadein`, `nonSelect`],
+    classes: [`center`, `button`, `nonSelect`, `fadein`],
     extras:
     [
       [`onclick`, dunp.trigger(click)]
