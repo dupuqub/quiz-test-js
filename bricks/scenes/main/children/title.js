@@ -10,7 +10,7 @@ project.bricks.scenes.main.children.title = (inner, theme) =>
   styles:
   [
     [`color`, `#AAA`],
-    [`font-size`, `calc(var(--u) * ${theme ? 200 : 30})`],
+    [`font-size`, `calc(var(--u) * ${theme ? 200 : 50})`],
     [`font-family`, `Playfair Display, serif`],
     [`margin-right`, `calc(var(--u) * 80)`],
     [`margin-left`, `calc(var(--u) * 80)`],

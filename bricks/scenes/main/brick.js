@@ -22,6 +22,11 @@ project.bricks.scenes.main.brick = () =>
       {
         id: `titleBox`,
         classes: [`center`, `fadein`],
+        styles:
+        [
+          [`width`, `100%`],
+          [`height`, `calc(60% - var(--u) * 50)`],
+        ],
         inner:
         [
           project.bricks.rococo(`left`, 80, 50),
@@ -35,7 +40,17 @@ project.bricks.scenes.main.brick = () =>
           project.bricks.rococo(`right`, 80, 50),
         ],
       },
-      project.bricks.scenes.main.children.play(lang.play),
+      {
+        id: `playBox`,
+        classes: [`center`],
+        styles:
+        [
+          [`width`, `100%`],
+          [`height`, `40%`],
+          [`align-items`, `flex-start`],
+        ],
+        inner: project.bricks.scenes.main.children.play(lang.play),
+      },
       project.bricks.lang(lang.name),
     ],
   }
