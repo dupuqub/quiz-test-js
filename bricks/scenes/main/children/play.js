@@ -23,10 +23,10 @@ project.bricks.scenes.main.children.play = inner =>
     extras: [[`onclick`, dunp.trigger(click)]],
     styles:
     [
-      [`width`, `calc(var(--u) * 180)`],
-      [`height`, `calc(var(--u) * 180)`],
+      [`width`, `calc(var(--u) * 250)`],
+      [`height`, `calc(var(--u) * 250)`],
       [`transition`, `all 0.2s`],
-      [`font-size`, `calc(var(--u) * 40)`],
+      [`font-size`, `calc(var(--u) * 60)`],
       [`font-family`, `Montserrat, sans-serif`],
       [`border-radius`, `50%`],
     ],
