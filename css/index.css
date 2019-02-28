@@ -31,8 +31,8 @@
 
 .selected
 {
-  border: calc(var(--u) * 10) solid orange;
-  box-sizing: border-box;
+  background: orange;
+  color: white;
 }
 
 /*....................................................................................................................*/
