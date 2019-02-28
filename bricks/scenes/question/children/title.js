@@ -5,7 +5,8 @@
 
 project.bricks.scenes.question.children.title = question =>
 ({
-  classes: [`center`, `fadein`],
+  id: `header`,
+  classes: [`fadein`, `center`],
   styles:
   [
     [`width`, `100%`],
@@ -13,19 +14,40 @@ project.bricks.scenes.question.children.title = question =>
     [`color`, `#AAA`],
     [`font-size`, `calc(var(--u) * 70)`],
     [`font-family`, `Playfair Display, serif`],
+    [`align-items`, `flex-start`],
   ],
   inner:
   [
-    project.bricks.rococo(`left`, 50, 0),
+    project.bricks.full(),
+    {
+      id: `titleBox`,
+      classes: [`center`],
+      styles:
+      [
+        [`width`, `calc(100% - var(--u) * 200)`],
+        [`height`, `100%`],
+      ],
+      inner:
+      [
+        project.bricks.rococo(`left`, 50, 0),
+        {
+          styles:
+          [
+            [`margin-left`, `calc(var(--u) * 70)`],
+            [`margin-right`, `calc(var(--u) * 70)`],
+          ],
+          inner: question,
+        },
+        project.bricks.rococo(`right`, 50, 0),
+      ],
+    },
     {
       styles:
       [
-        [`margin-left`, `calc(var(--u) * 70)`],
-        [`margin-right`, `calc(var(--u) * 70)`],
+        [`width`, `calc(var(--u) * 100)`],
+        [`height`, `calc(var(--u) * 100)`],
       ],
-      inner: question,
     },
-    project.bricks.rococo(`right`, 50, 0),
   ],
 })
 
