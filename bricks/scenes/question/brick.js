@@ -24,19 +24,8 @@ project.bricks.scenes.question.brick = () =>
     ],
     inner:
     [
-      {
-        id: `title`,
-        classes: [`center`, `fadein`],
-        styles:
-        [
-          [`width`, `100%`],
-          [`height`, `20%`],
-          [`color`, `#AAA`],
-          [`font-size`, `calc(var(--u) * 70)`],
-          [`font-family`, `Playfair Display, serif`],
-        ],
-        inner: lang.question,
-      },
+      project.bricks.lang(dunp.upper(lang.name)),
+      project.bricks.scenes.question.children.title(lang.question),
       {
         id: `zoneBox`,
         classes: [`center`],
@@ -72,7 +61,6 @@ project.bricks.scenes.question.brick = () =>
           },
         ],
       },
-      project.bricks.lang(dunp.upper(lang.name)),
     ],
   }
 
