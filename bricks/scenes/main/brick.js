@@ -16,6 +16,8 @@ project.bricks.scenes.main.brick = () =>
       [`height`, `100%`],
       [`background`, `#FFF`],
       [`position`, `relative`],
+      [`align-items`, `flex-start`],
+      [`justify-content`, `flex-start`],
     ],
     inner:
     [
@@ -52,6 +54,15 @@ project.bricks.scenes.main.brick = () =>
         inner: project.bricks.scenes.main.children.play(lang.play),
       },
       project.bricks.lang(lang.name),
+      {
+        styles:
+        [
+          [`width`, `calc(var(--u) * 20)`],
+          [`height`, `calc(var(--u) * 20)`],
+          [`background`, `orange`],
+          [`position`, `absolute`],
+        ],
+      },
     ],
   }
 
