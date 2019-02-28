@@ -11,7 +11,6 @@ project.begin = () =>
 {
   dunp.get(`title`).innerHTML = dunp.getLang().title
   dunp.changeScene(`main`)
-  window.scrollTo(0, 1)
 }
 
 //......................................................................................................................
