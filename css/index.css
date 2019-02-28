@@ -30,7 +30,7 @@
 
 .selected
 {
-  border: 10px solid orange;
+  border: calc(var(--u) * 3) solid orange;
   box-sizing: border-box;
 }
 

@@ -35,12 +35,12 @@ project.bricks.lang = (inner, absolute) =>
       [`width`, `100%`],
       [`height`, `calc(var(--u) * 50)`],
       [`transition`, `all 0.2s`],
-      [`font-size`, `calc(var(--u) * 30)`],
+      [`font-size`, `calc(var(--u) * 40)`],
       [`font-family`, `Montserrat, sans-serif`],
       [`position`, absolute ? `absolute` : `relative`],
       [`transform`, absolute ? `translateY(calc(var(--h) / 2 - var(--u) * 25))` : `0`],
     ],
-    inner,
+    inner: dunp.upper(inner),
   }
 
   return brick
