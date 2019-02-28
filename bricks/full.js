@@ -7,9 +7,17 @@ project.bricks.full = () =>
 {
   const click = () =>
   {
-    const body = dunp.get(`body`)
-
-         if(body.requestFullscreen) body.requestFullscreen()
+    if(document.fullscreenElement
+    || document.msFullscreenElement
+    || document.mozFullScreenElement
+    || document.webkitFullscreenElement)
+    {
+           if(document.exitFullscreen) document.exitFullscreen()
+      else if(document.mozCancelFullScreen) document.mozCancelFullScreen()
+      else if(document.webkitExitFullscreen) document.webkitExitFullscreen()
+      else if(document.msExitFullscreen) document.msExitFullscreen()
+    }
+    else if(body.requestFullscreen) body.requestFullscreen()
     else if(body.msRequestFullscreen) body.msRequestFullscreen()
     else if(body.mozRequestFullScreen) body.mozRequestFullScreen()
     else if(body.webkitRequestFullscreen) body.webkitRequestFullscreen()
