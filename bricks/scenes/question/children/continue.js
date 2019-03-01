@@ -17,7 +17,10 @@ project.bricks.scenes.question.children.continue = () =>
 
     if(project.states.temp.locked)
     {
-      // go to next picture
+      project.states.temp.question ++
+      project.states.temp.selected = null
+      project.states.temp.locked = false
+      dunp.changeScene(`question`)
     }
 
     else if(dunp.typeOf(project.states.temp.selected) !== `null`)
