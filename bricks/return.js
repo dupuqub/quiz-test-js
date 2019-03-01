@@ -13,9 +13,13 @@ project.bricks.return = () =>
 
     const header = dunp.get(`#header`)
     const zoneBox = dunp.get(`#zoneBox`)
+    const message = dunp.get(`#message`)
+    const again = dunp.get(`#again`)
 
     if(header) header.classList.add(`fadeout`)
     if(zoneBox) zoneBox.classList.add(`fadeout`)
+    if(message) message.classList.add(`fadeout`)
+    if(again) again.classList.add(`fadeout`)
 
     setTimeout(() => dunp.changeScene(`main`), 500)
   }

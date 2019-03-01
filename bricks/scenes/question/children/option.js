@@ -31,10 +31,7 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
   {
     id: `option${index}`,
     classes: [`center`, `button`, `nonSelect`, `fadein`, `option`],
-    extras:
-    [
-      [`onclick`, dunp.trigger(click)]
-    ],
+    extras: [[`onclick`, dunp.trigger(click)]],
     styles:
     [
       [`width`, `calc(var(--u) * 600)`],

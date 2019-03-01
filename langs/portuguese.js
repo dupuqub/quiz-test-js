@@ -15,5 +15,7 @@ project.langs.portuguese =
   painted: `pintou`,
   in: `em`,
   next: `PRÓXIMO`,
+  achieved: `Você acertou`,
+  another: `OUTRA`,
 }
 

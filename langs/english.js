@@ -15,5 +15,7 @@ project.langs.english =
   painted: `painted`,
   in: `in`,
   next: `NEXT`,
+  achieved: `You got`,
+  another: `ANOTHER`,
 }
 
