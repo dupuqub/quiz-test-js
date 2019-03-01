@@ -51,7 +51,11 @@ project.bricks.scenes.question.children.continue = () =>
 
         if(selected === option.innerHTML)
         {
-          if(selectedIndex === 0) option.classList.add(`green`)
+          if(selectedIndex === 0)
+          {
+            project.states.temp.score ++
+            option.classList.add(`green`)
+          }
           else option.classList.add(`red`)
         }
         else if(innerIndex === 0) option.classList.add(`green`)
