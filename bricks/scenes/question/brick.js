@@ -13,8 +13,8 @@ project.bricks.scenes.question.brick = () =>
 
   const click = () =>
   {
-    const image = dunp.get(`#image`)
-    image.style.transform = image.style.transform === `rotateY(180deg)` ? `` : `rotateY(180deg)`
+    dunp.get(`#image`).style.transform = `rotateY(180deg)`
+    dunp.get(`#solution`).style.opacity = 1
   }
 
   const brick =
@@ -88,7 +88,6 @@ project.bricks.scenes.question.brick = () =>
                     [`border-radius`, `calc(var(--u) * 90)`],
                     [`margin-bottom`, `calc(var(--u) * 50)`],
                     [`transition`, `all 0.3s`],
-                    [`backface-visibility`, `hidden`],
                   ],
                   inner:
                   {
@@ -103,8 +102,11 @@ project.bricks.scenes.question.brick = () =>
                       [`color`, `#666`],
                       [`font-size`, `calc(var(--u) * 40)`],
                       [`font-family`, `Playfair Display, serif`],
+                      [`transform`, `rotateY(180deg)`],
+                      [`transition`, `all 0.3s`],
+                      [`opacity`, `0`],
                     ],
-                    inner: `Tarsila do Amaral pintou<br>"Antropofagia" em 1929`
+                    inner: `${question.painters[0]}<br>${lang.painted} ${question.title}<br>${lang.in} ${question.year}.`
                   },
                 },
                 {

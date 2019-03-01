@@ -12,5 +12,7 @@ project.langs.portuguese =
   play: `JOGAR`,
   question: `Quem pintou esta obra?`,
   confirm: `CONFIRMO`,
+  painted: `pintou`,
+  in: `em`,
 }
 

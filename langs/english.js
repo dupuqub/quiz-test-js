@@ -12,5 +12,7 @@ project.langs.english =
   play: `PLAY`,
   question: `Who painted this piece?`,
   confirm: `CONFIRM`,
+  painted: `painted`,
+  in: `in`,
 }
 
