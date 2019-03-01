@@ -41,13 +41,7 @@ project.bricks.scenes.question.children.title = question =>
         project.bricks.rococo(`right`, 50, 0),
       ],
     },
-    {
-      styles:
-      [
-        [`width`, `calc(var(--u) * 100)`],
-        [`height`, `calc(var(--u) * 100)`],
-      ],
-    },
+    project.bricks.return(),
   ],
 })
 

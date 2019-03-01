@@ -7,19 +7,22 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
 {
   const click = () =>
   {
-    const {target} = event
-    const {id} = target
-    const index = id.slice(-1)
-    const selected = dunp.get(`#${id}`).innerHTML
-    const questionIndex = project.states.temp.question
-    const correct = project.questions[questionIndex].painters[0]
+    if(!project.states.temp.locked)
+    {
+      const {target} = event
+      const {id} = target
+      const index = id.slice(-1)
+      const selected = dunp.get(`#${id}`).innerHTML
+      const questionIndex = project.states.temp.question
+      const correct = project.questions[questionIndex].painters[0]
 
-    if(selected === correct) console.log(`correct`)
-    else console.log(`wrong`)
+      if(selected === correct) console.log(`correct`)
+      else console.log(`wrong`)
 
-    dunp.getAll(`.option`).forEach(option => option.classList.remove(`selected`))
+      dunp.getAll(`.option`).forEach(option => option.classList.remove(`selected`))
 
-    target.classList.add(`selected`)
+      target.classList.add(`selected`)
+    }
   }
 
   const brick =

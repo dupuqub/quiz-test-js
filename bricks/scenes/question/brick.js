@@ -27,6 +27,7 @@ project.bricks.scenes.question.brick = () =>
     // The code line below would also work as a double quotes replacement.
     // String.fromCharCode(34)
 
+    project.states.temp.locked = true
     image.style.transform = `rotateY(180deg)`
     solution.style.opacity = 1
     solution.innerHTML = `${question.painters[0]} ${lang.painted} ''${question.title}'' ${lang.in} ${question.year}.`
@@ -52,7 +53,7 @@ project.bricks.scenes.question.brick = () =>
         styles:
         [
           [`width`, `100%`],
-          [`height`, `calc(80% - var(--u) * 50)`],
+          [`height`, `80%`],
         ],
         inner:
         [
@@ -146,7 +147,6 @@ project.bricks.scenes.question.brick = () =>
           },
         ],
       },
-      project.bricks.lang(lang.name),
     ],
   }
 

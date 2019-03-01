@@ -8,5 +8,6 @@ project.states.temp =
   scene: {},
   stage: {},
   question: 0,
+  locked: false,
 }
 
