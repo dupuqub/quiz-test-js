@@ -20,7 +20,9 @@ project.bricks.scenes.question.children.continue = () =>
       project.states.temp.question ++
       project.states.temp.selected = null
       project.states.temp.locked = false
-      dunp.changeScene(`question`)
+
+      if(project.states.temp.question === 4) dunp.changeScene(`ending`)
+      else dunp.changeScene(`question`)
     }
 
     else if(dunp.typeOf(project.states.temp.selected) !== `null`)
