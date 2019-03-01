@@ -1,6 +1,8 @@
 
 /*....................................................................................................................*/
 
+body{overflow: hidden}
+
 #preloads,
 #play
 {display: none}
@@ -8,36 +10,6 @@
 #full:hover,
 #return:hover
 {opacity: 0}
-
-/*....................................................................................................................*/
-
-.button
-{
-  color: #AAA;
-  background: #FFF;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.button:hover
-{
-  color: #FFF;
-  background: #AAA;
-}
-
-.nonSelect
-{
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-.selected
-{
-  background: orange;
-  color: white;
-}
 
 /*....................................................................................................................*/
 
@@ -65,6 +37,73 @@
   0%{transform: translateX(calc(var(--u) * 200))}
   60%{transform: translateX(calc(var(--u) * -10))}
   100%{transform: translateX(0)}
+}
+
+/*....................................................................................................................*/
+
+.button
+{
+  color: #AAA;
+  background: #FFF;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:hover
+{
+  color: #FFF;
+  background: #AAA;
+}
+
+/*....................................................................................................................*/
+
+.nonSelect
+{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.selected
+{
+  background: #DD9900;
+  color: white;
+}
+
+.pulse
+{
+  box-sizing: border-box;
+  border: calc(var(--u) * 90) solid #FFFFFF00;
+}
+
+/*....................................................................................................................*/
+
+.warning
+{
+  box-sizing: border-box;
+  animation: warning 1s ease infinite alternate;
+}
+
+@keyframes warning
+{
+  from{border: calc(var(--u) * 10) solid #DD9900}
+  to{border: calc(var(--u) * 10) solid #FFFFFF00}
+}
+
+/*....................................................................................................................*/
+
+.locked
+{
+  box-sizing: border-box;
+  animation: locked 0.5s ease;
+}
+
+@keyframes locked
+{
+  0%{border: calc(var(--u) * 90) solid #FF224400}
+  50%{border: calc(var(--u) * 90) solid #FF2244FF}
+  100%{border: calc(var(--u) * 90) solid #FF224400}
 }
 
 /*....................................................................................................................*/

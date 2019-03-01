@@ -10,7 +10,11 @@ project.bricks.return = () =>
     project.states.temp.locked = false
     project.states.temp.selected = null
     project.states.temp.question = 0
-    dunp.changeScene(`main`)
+
+    dunp.get(`#header`).classList.add(`fadeout`)
+    dunp.get(`#zoneBox`).classList.add(`fadeout`)
+
+    setTimeout(() => dunp.changeScene(`main`), 500)
   }
 
   const brick =

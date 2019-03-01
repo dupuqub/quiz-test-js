@@ -22,6 +22,10 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
       dunp.getAll(`.option`).forEach(option => option.classList.remove(`selected`))
       project.states.temp.selected = selected
       target.classList.add(`selected`)
+
+      target.classList.add(`pulse`)
+      target.classList.remove(`fadein`)
+      setTimeout(() => target.classList.remove(`pulse`), 500)
     }
   }
 
@@ -41,6 +45,7 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
       [`font-family`, `Montserrat, sans-serif`],
       [`border-radius`, `calc(var(--u) * 90)`],
       [`transition`, `all 0.3s`],
+      [`white-space`, `nowrap`],
     ],
     inner: question.painters[item],
   }

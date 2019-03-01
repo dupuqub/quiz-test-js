@@ -9,29 +9,6 @@ project.bricks.scenes.question.brick = () =>
   const arrayNew = dunp.array.shuffle(arrayOld)
   const questionIndex = project.states.temp.question
   const question = project.questions[questionIndex]
-  const lang = dunp.getLang()
-
-  const click = () =>
-  {
-    if(project.states.temp.locked)
-    {
-      // go to next picture
-    }
-    else if(dunp.typeOf(project.states.temp.selected) !== `null`)
-    {
-      const lang = dunp.getLang()
-      const image = dunp.get(`#image`)
-      const solution = dunp.get(`#solution`)
-      const questionIndex = project.states.temp.question
-      const question = project.questions[questionIndex]
-
-      project.states.temp.locked = true
-      image.style.transform = `rotateY(180deg)`
-      solution.style.opacity = 1
-      solution.innerHTML = `${question.painters[0]} ${lang.painted} ''${question.title}'' ${lang.in} ${question.year}.`
-    }
-  }
-
   const brick =
   {
     id: `sceneQuestion`,
@@ -45,7 +22,7 @@ project.bricks.scenes.question.brick = () =>
     ],
     inner:
     [
-      project.bricks.scenes.question.children.title(lang.question),
+      project.bricks.scenes.question.children.title(),
       {
         id: `zoneBox`,
         classes: [`center`],
@@ -89,58 +66,8 @@ project.bricks.scenes.question.brick = () =>
               ],
               inner:
               [
-                {
-                  id: `image`,
-                  classes: [`center`, `fadein`],
-                  styles:
-                  [
-                    [`width`, `calc(var(--u) * 600)`],
-                    [`height`, `calc(var(--u) * 500)`],
-                    [`background-image`, `url(${question.link})`],
-                    [`background-repeat`, `no-repeat`],
-                    [`background-position`, question.position],
-                    [`background-size`, `cover`],
-                    [`border-radius`, `calc(var(--u) * 90)`],
-                    [`margin-bottom`, `calc(var(--u) * 50)`],
-                    [`transition`, `all 0.3s`],
-                  ],
-                  inner:
-                  {
-                    id: `solution`,
-                    classes: [`center`, `nonSelect`],
-                    styles:
-                    [
-                      [`width`, `calc(var(--u) * 580)`],
-                      [`height`, `calc(var(--u) * 480)`],
-                      [`border-radius`, `calc(var(--u) * 80)`],
-                      [`background`, `#FFFFFFEE`],
-                      [`color`, `#666`],
-                      [`font-size`, `calc(var(--u) * 40)`],
-                      [`font-family`, `Playfair Display, serif`],
-                      [`transform`, `rotateY(180deg)`],
-                      [`transition`, `all 0.3s`],
-                      [`opacity`, `0`],
-                      [`border`, `calc(var(--u) * 40) solid #00000000`],
-                      [`box-sizing`, `border-box`],
-                      [`text-align`, `center`],
-                    ],
-                  },
-                },
-                {
-                  id: `continue`,
-                  classes: [`center`, `button`, `nonSelect`, `fadein`],
-                  extras: [[`onclick`, dunp.trigger(click)]],
-                  styles:
-                  [
-                    [`width`, `calc(var(--u) * 600)`],
-                    [`height`, `calc(var(--u) * 180)`],
-                    [`border-radius`, `calc(var(--u) * 100)`],
-                    [`transition`, `all 0.3s`],
-                    [`font-size`, `calc(var(--u) * 40)`],
-                    [`font-family`, `Montserrat, sans-serif`],
-                  ],
-                  inner: lang.continue,
-                },
+                project.bricks.scenes.question.children.image(question.link, question.position),
+                project.bricks.scenes.question.children.continue(),
               ],
             },
           },

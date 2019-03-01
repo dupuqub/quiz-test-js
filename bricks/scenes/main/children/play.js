@@ -8,10 +8,14 @@ project.bricks.scenes.main.children.play = inner =>
   const click = () =>
   {
     dunp.get(`#titleBox`).classList.add(`fadeout`)
-    dunp.get(`#rococoLeft`).classList.add(`fadeout`)
-    dunp.get(`#rococoRight`).classList.add(`fadeout`)
+    dunp.get(`#header`).classList.add(`fadeout`)
     dunp.get(`#play`).classList.add(`fadeout`)
     dunp.get(`#lang`).classList.add(`fadeout`)
+
+    const {target} = event
+
+    target.classList.add(`pulse`)
+    target.classList.remove(`fadein`)
 
     setTimeout(() => dunp.changeScene(`question`), 500)
   }

@@ -14,5 +14,6 @@ project.langs.portuguese =
   continue: `CONTINUAR`,
   painted: `pintou`,
   in: `em`,
+  next: `PRÓXIMO`,
 }
 

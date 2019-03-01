@@ -26,7 +26,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="804.30604"
+     inkscape:cx="829.76189"
      inkscape:cy="-89.797836"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -298,7 +298,9 @@
     </g>
     <g
        transform="translate(0,79.375015)"
-       id="g212">
+       id="g212"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
       <rect
          y="253.37407"
          x="140.27994"
@@ -315,7 +317,9 @@
     </g>
     <g
        transform="translate(0,79.375015)"
-       id="g208">
+       id="g208"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
       <path
          id="rect884-0-0-3-1-5-4-2"
          d="m 299.02994,253.37408 v 30.95624 8.73125 8.73125 c 0,17.14976 -13.80648,30.95625 -30.95625,30.95625 h -8.73125 -8.73125 -30.95625 v -30.95625 -17.4625 -30.95624 h 30.95625 17.4625 z"

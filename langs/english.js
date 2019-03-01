@@ -14,5 +14,6 @@ project.langs.english =
   continue: `CONTINUE`,
   painted: `painted`,
   in: `in`,
+  next: `NEXT`,
 }
 

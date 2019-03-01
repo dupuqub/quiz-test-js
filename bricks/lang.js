@@ -22,7 +22,18 @@ project.bricks.lang = inner =>
 
     project.states.safe.lang = newLang
     title.innerHTML = titleText
-    dunp.changeScene(sceneId)
+
+    dunp.get(`#titleBox`).classList.add(`fadeout`)
+    dunp.get(`#header`).classList.add(`fadeout`)
+    dunp.get(`#play`).classList.add(`fadeout`)
+    dunp.get(`#lang`).classList.add(`fadeout`)
+
+    const {target} = event
+
+    target.classList.add(`pulse`)
+    target.classList.remove(`fadein`)
+
+    setTimeout(() => dunp.changeScene(sceneId), 500)
   }
 
   const brick =
