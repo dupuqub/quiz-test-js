@@ -76,7 +76,7 @@ project.bricks.scenes.question.brick = () =>
               [
                 {
                   id: `image`,
-                  classes: [`fadein`],
+                  classes: [`center`, `fadein`],
                   styles:
                   [
                     [`width`, `calc(var(--u) * 600)`],
@@ -90,6 +90,22 @@ project.bricks.scenes.question.brick = () =>
                     [`transition`, `all 0.3s`],
                     [`backface-visibility`, `hidden`],
                   ],
+                  inner:
+                  {
+                    id: `solution`,
+                    classes: [`center`],
+                    styles:
+                    [
+                      [`width`, `calc(var(--u) * 580)`],
+                      [`height`, `calc(var(--u) * 480)`],
+                      [`border-radius`, `calc(var(--u) * 80)`],
+                      [`background`, `#FFFFFFEE`],
+                      [`color`, `#666`],
+                      [`font-size`, `calc(var(--u) * 40)`],
+                      [`font-family`, `Playfair Display, serif`],
+                    ],
+                    inner: `Tarsila do Amaral pintou<br>"Antropofagia" em 1929`
+                  },
                 },
                 {
                   id: `confirm`,
