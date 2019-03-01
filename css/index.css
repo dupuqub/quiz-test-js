@@ -67,7 +67,7 @@ body{overflow: hidden}
 
 .selected
 {
-  background: #DD9900;
+  background: #FFAA00;
   color: white;
 }
 
@@ -87,22 +87,24 @@ body{overflow: hidden}
 
 @keyframes warning
 {
-  from{border: calc(var(--u) * 10) solid #DD9900}
+  from{border: calc(var(--u) * 10) solid #FFAA00}
   to{border: calc(var(--u) * 10) solid #FFFFFF00}
 }
 
 /*....................................................................................................................*/
 
+.mobileLocked:hover{background: #FFEEEE}
+
 .locked
 {
   box-sizing: border-box;
-  animation: locked 0.5s ease;
+  animation: locked 0.2s ease;
 }
 
 @keyframes locked
 {
   0%{border: calc(var(--u) * 90) solid #FF224400}
-  50%{border: calc(var(--u) * 90) solid #FF2244FF}
+  50%{border: calc(var(--u) * 90) solid #FF2244}
   100%{border: calc(var(--u) * 90) solid #FF224400}
 }
 

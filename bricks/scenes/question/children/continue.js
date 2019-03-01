@@ -58,7 +58,7 @@ project.bricks.scenes.question.children.continue = () =>
   const brick =
   {
     id: `continue`,
-    classes: [`center`, `button`, `nonSelect`, `fadein`],
+    classes: [`center`, `button`, `nonSelect`, `fadein`, `mobileLocked`],
     extras: [[`onclick`, dunp.trigger(click)]],
     styles:
     [
