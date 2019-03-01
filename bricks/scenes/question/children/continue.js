@@ -39,8 +39,8 @@ project.bricks.scenes.question.children.continue = () =>
 
       setTimeout(() =>
       {
-        target.classList.remove(`pulse`)
         target.classList.add(`warning`)
+        target.classList.remove(`pulse`)
       }, 500)
     }
 

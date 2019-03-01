@@ -19,12 +19,12 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
       // if(selected === correct) console.log(`correct`)
       // else console.log(`wrong`)
 
-      dunp.getAll(`.option`).forEach(option => option.classList.remove(`selected`))
       project.states.temp.selected = selected
-      target.classList.add(`selected`)
 
+      dunp.getAll(`.option`).forEach(option => option.classList.remove(`selected`))
       dunp.get(`#continue`).classList.remove(`mobileLocked`)
       target.classList.add(`pulse`)
+      target.classList.add(`selected`)
       target.classList.remove(`fadein`)
       setTimeout(() => target.classList.remove(`pulse`), 500)
     }
