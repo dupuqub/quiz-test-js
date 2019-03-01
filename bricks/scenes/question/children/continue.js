@@ -35,13 +35,27 @@ project.bricks.scenes.question.children.continue = () =>
 
       target.innerHTML = lang.next
       target.classList.add(`pulse`)
+      target.classList.add(`yellow`)
       target.classList.remove(`fadein`)
 
-      setTimeout(() =>
+      setTimeout(() => target.classList.remove(`pulse`), 500)
+
+      const selected = project.states.temp.selected
+      const selectedIndex = question.painters.indexOf(selected)
+
+      dunp.getAll(`.option`).forEach((option, index) =>
       {
-        target.classList.add(`warning`)
-        target.classList.remove(`pulse`)
-      }, 500)
+        option.classList.remove(`yellow`)
+
+        const innerIndex = question.painters.indexOf(option.innerHTML)
+
+        if(selected === option.innerHTML)
+        {
+          if(selectedIndex === 0) option.classList.add(`green`)
+          else option.classList.add(`red`)
+        }
+        else if(innerIndex === 0) option.classList.add(`green`)
+      })
     }
   }
 

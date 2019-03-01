@@ -69,30 +69,16 @@ body{overflow: hidden}
 
 /*....................................................................................................................*/
 
-.warning
-{
-  box-sizing: border-box;
-  animation: warning 1s ease infinite alternate;
-}
+.yellow, .red, .green{box-sizing: border-box}
 
-@keyframes warning
-{
-  from{border: calc(var(--u) * 10) solid #FF8800}
-  to{border: calc(var(--u) * 10) solid #FFFFFF00}
-}
+.yellow{border: calc(var(--u) * 10) solid #FFCC22}
+.yellow:hover{border: calc(var(--u) * 10) solid #FFCC22}
 
-/*....................................................................................................................*/
+.red{border: calc(var(--u) * 10) solid #DD5566}
+.red:hover{border: calc(var(--u) * 10) solid #DD5566}
 
-.yellow, .red, .green{color: white}
-
-.yellow{background: #FFAA00}
-.yellow:hover{background: #FFAA00}
-
-.red{background: #FF0022}
-.red:hover{background: #FF0022}
-
-#green{background: #22FF44}
-#green:hover{background: #44FF66}
+.green{border: calc(var(--u) * 10) solid #88CC88}
+.green:hover{border: calc(var(--u) * 10) solid #88CC88}
 
 /*....................................................................................................................*/
 

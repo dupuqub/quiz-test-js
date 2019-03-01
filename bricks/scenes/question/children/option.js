@@ -16,9 +16,6 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
       const questionIndex = project.states.temp.question
       const correct = project.questions[questionIndex].painters[0]
 
-      // if(selected === correct) console.log(`correct`)
-      // else console.log(`wrong`)
-
       project.states.temp.selected = selected
 
       dunp.getAll(`.option`).forEach(option => option.classList.remove(`yellow`))
