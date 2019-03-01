@@ -17,5 +17,6 @@ project.langs.english =
   next: `NEXT`,
   achieved: `You got`,
   another: `ANOTHER`,
+  dev: `developed by`,
 }
 

@@ -71,7 +71,19 @@ project.bricks.scenes.ending.brick = () =>
           [`font-size`, `calc(var(--u) * 100)`],
           [`font-family`, `Playfair Display, serif`],
         ],
-        inner: `${lang.achieved} ${score}!`,
+        inner:
+        [
+          project.bricks.rococo(`left`, 80, 0),
+          {
+            styles:
+            [
+              [`margin-left`, `calc(var(--u) * 150)`],
+              [`margin-right`, `calc(var(--u) * 150)`],
+            ],
+            inner: `${lang.achieved} ${score}!`,
+          },
+          project.bricks.rococo(`right`, 80, 0),
+        ],
       },
       {
         id: `againBox`,
@@ -79,7 +91,7 @@ project.bricks.scenes.ending.brick = () =>
         styles:
         [
           [`width`, `100%`],
-          [`height`, `calc(50% - var(--u) * 100)`],
+          [`height`, `calc(40% - var(--u) * 100)`],
           [`color`, `#AAA`],
           [`font-size`, `calc(var(--u) * 50)`],
           [`font-family`, `Montserrat, sans-serif`],
@@ -102,6 +114,19 @@ project.bricks.scenes.ending.brick = () =>
           ],
           inner: lang.another,
         },
+      },
+      {
+        id: `credits`,
+        classes: [`center`],
+        styles:
+        [
+          [`width`, `100%`],
+          [`height`, `10%`],
+          [`color`, `#AAA`],
+          [`font-size`, `calc(var(--u) * 30)`],
+          [`font-family`, `Playfair Display, serif`],
+        ],
+        inner: `${lang.dev} Fillipe Ogg`,
       },
     ],
   }

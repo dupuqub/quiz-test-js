@@ -17,5 +17,6 @@ project.langs.portuguese =
   next: `PRÓXIMO`,
   achieved: `Você acertou`,
   another: `OUTRA`,
+  dev: `desenvolvido por`,
 }
 
