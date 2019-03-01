@@ -13,8 +13,23 @@ project.bricks.scenes.question.brick = () =>
 
   const click = () =>
   {
-    dunp.get(`#image`).style.transform = `rotateY(180deg)`
-    dunp.get(`#solution`).style.opacity = 1
+    const lang = dunp.getLang()
+    const image = dunp.get(`#image`)
+    const solution = dunp.get(`#solution`)
+    const questionIndex = project.states.temp.question
+    const question = project.questions[questionIndex]
+
+    // Funtion.toString() has issue with having double quotes inside its text.
+    // The double quotes symbol can't even be written in commentaries.
+    // It will therefore be represented by 2 single quotes as in `''`.
+    // It also doesn't matter putting an inverted bar before it as in `\''`
+    // This is a browser (v8 engine) issue, not mine (dunp engine).
+    // The code line below would also work as a double quotes replacement.
+    // String.fromCharCode(34)
+
+    image.style.transform = `rotateY(180deg)`
+    solution.style.opacity = 1
+    solution.innerHTML = `${question.painters[0]} ${lang.painted} ''${question.title}'' ${lang.in} ${question.year}.`
   }
 
   const brick =
@@ -92,7 +107,7 @@ project.bricks.scenes.question.brick = () =>
                   inner:
                   {
                     id: `solution`,
-                    classes: [`center`],
+                    classes: [`center`, `nonSelect`],
                     styles:
                     [
                       [`width`, `calc(var(--u) * 580)`],
@@ -105,8 +120,9 @@ project.bricks.scenes.question.brick = () =>
                       [`transform`, `rotateY(180deg)`],
                       [`transition`, `all 0.3s`],
                       [`opacity`, `0`],
+                      [`border`, `calc(var(--u) * 40) solid #00000000`],
+                      [`box-sizing`, `border-box`],
                     ],
-                    inner: `${question.painters[0]}<br>${lang.painted} ${question.title}<br>${lang.in} ${question.year}.`
                   },
                 },
                 {

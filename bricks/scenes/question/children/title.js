@@ -21,7 +21,7 @@ project.bricks.scenes.question.children.title = question =>
     project.bricks.full(),
     {
       id: `titleBox`,
-      classes: [`center`],
+      classes: [`center`, `nonSelect`],
       styles:
       [
         [`width`, `calc(100% - var(--u) * 200)`],
