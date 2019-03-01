@@ -122,11 +122,12 @@ project.bricks.scenes.question.brick = () =>
                       [`opacity`, `0`],
                       [`border`, `calc(var(--u) * 40) solid #00000000`],
                       [`box-sizing`, `border-box`],
+                      [`text-align`, `center`],
                     ],
                   },
                 },
                 {
-                  id: `confirm`,
+                  id: `continue`,
                   classes: [`center`, `button`, `nonSelect`, `fadein`],
                   extras: [[`onclick`, dunp.trigger(click)]],
                   styles:
@@ -138,7 +139,7 @@ project.bricks.scenes.question.brick = () =>
                     [`font-size`, `calc(var(--u) * 40)`],
                     [`font-family`, `Montserrat, sans-serif`],
                   ],
-                  inner: lang.confirm,
+                  inner: lang.continue,
                 },
               ],
             },

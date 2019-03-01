@@ -11,7 +11,7 @@ project.langs.english =
   pageTitle: [`the${dunp.space(4)}QUIZ${dunp.space(4)}of`, `ART`],
   play: `PLAY`,
   question: `Who painted this piece?`,
-  confirm: `CONFIRM`,
+  continue: `CONTINUE`,
   painted: `painted`,
   in: `in`,
 }
