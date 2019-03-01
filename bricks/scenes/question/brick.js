@@ -9,8 +9,14 @@ project.bricks.scenes.question.brick = () =>
   const arrayNew = dunp.array.shuffle(arrayOld)
   const questionIndex = project.states.temp.question
   const question = project.questions[questionIndex]
-
   const lang = dunp.getLang()
+
+  const click = () =>
+  {
+    const image = dunp.get(`#image`)
+    image.style.transform = image.style.transform === `rotateY(180deg)` ? `` : `rotateY(180deg)`
+  }
+
   const brick =
   {
     id: `sceneQuestion`,
@@ -61,6 +67,11 @@ project.bricks.scenes.question.brick = () =>
             {
               id: `zoneRightBox`,
               classes: [`center`, `column`],
+              styles:
+              [
+                [`transform-style`, `preserve-3d`],
+                [`perspective`, `1000px`],
+              ],
               inner:
               [
                 {
@@ -76,17 +87,20 @@ project.bricks.scenes.question.brick = () =>
                     [`background-size`, `cover`],
                     [`border-radius`, `calc(var(--u) * 90)`],
                     [`margin-bottom`, `calc(var(--u) * 50)`],
+                    [`transition`, `all 0.3s`],
+                    [`backface-visibility`, `hidden`],
                   ],
                 },
                 {
                   id: `confirm`,
                   classes: [`center`, `button`, `nonSelect`, `fadein`],
+                  extras: [[`onclick`, dunp.trigger(click)]],
                   styles:
                   [
                     [`width`, `calc(var(--u) * 600)`],
                     [`height`, `calc(var(--u) * 180)`],
                     [`border-radius`, `calc(var(--u) * 100)`],
-                    [`transition`, `all 0.2s`],
+                    [`transition`, `all 0.3s`],
                     [`font-size`, `calc(var(--u) * 40)`],
                     [`font-family`, `Montserrat, sans-serif`],
                   ],

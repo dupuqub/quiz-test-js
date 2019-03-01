@@ -25,7 +25,7 @@ project.bricks.scenes.main.children.play = inner =>
     [
       [`width`, `calc(var(--u) * 250)`],
       [`height`, `calc(var(--u) * 250)`],
-      [`transition`, `all 0.2s`],
+      [`transition`, `all 0.3s`],
       [`font-size`, `calc(var(--u) * 60)`],
       [`font-family`, `Montserrat, sans-serif`],
       [`border-radius`, `50%`],

@@ -37,7 +37,7 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
       [`font-size`, `calc(var(--u) * 40)`],
       [`font-family`, `Montserrat, sans-serif`],
       [`border-radius`, `calc(var(--u) * 90)`],
-      [`transition`, `all 0.2s`],
+      [`transition`, `all 0.3s`],
     ],
     inner: question.painters[item],
   }

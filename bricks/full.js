@@ -49,7 +49,7 @@ project.bricks.full = () =>
       [
         [`width`, `100%`],
         [`height`, `100%`],
-        [`transition`, `all 0.2s`],
+        [`transition`, `all 0.3s`],
       ],
     },
   }

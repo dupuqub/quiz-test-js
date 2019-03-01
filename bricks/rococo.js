@@ -13,7 +13,7 @@ project.bricks.rococo = (side, size, bottom) =>
     [
       [`width`, `calc(var(--u) * ${size * 5})`],
       [`height`, `calc(var(--u) * ${size})`],
-      [`transition`, `all 0.2s`],
+      [`transition`, `all 0.3s`],
       [`background-image`, `url(images/${id}.png)`],
       [`background-position`, `center`],
       [`background-size`, `contain`],
