@@ -43,14 +43,6 @@ project.bricks.scenes.question.children.continue = () =>
         target.classList.remove(`pulse`)
       }, 500)
     }
-
-    else
-    {
-      target.classList.add(`locked`)
-      target.classList.remove(`fadein`)
-
-      setTimeout(() => target.classList.remove(`locked`), 500)
-    }
   }
 
   //....................................................................................................................
@@ -58,7 +50,7 @@ project.bricks.scenes.question.children.continue = () =>
   const brick =
   {
     id: `continue`,
-    classes: [`center`, `button`, `nonSelect`, `fadein`, `mobileLocked`],
+    classes: [`center`, `button`, `nonSelect`, `fadein`, `red`],
     extras: [[`onclick`, dunp.trigger(click)]],
     styles:
     [

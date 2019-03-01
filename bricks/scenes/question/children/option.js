@@ -21,10 +21,10 @@ project.bricks.scenes.question.children.option = (item, index, question) =>
 
       project.states.temp.selected = selected
 
-      dunp.getAll(`.option`).forEach(option => option.classList.remove(`selected`))
-      dunp.get(`#continue`).classList.remove(`mobileLocked`)
+      dunp.getAll(`.option`).forEach(option => option.classList.remove(`yellow`))
+      dunp.get(`#continue`).classList.remove(`red`)
       target.classList.add(`pulse`)
-      target.classList.add(`selected`)
+      target.classList.add(`yellow`)
       target.classList.remove(`fadein`)
       setTimeout(() => target.classList.remove(`pulse`), 500)
     }
