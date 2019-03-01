@@ -17,7 +17,7 @@ project.bricks.scenes.question.brick = () =>
     {
       // go to next picture
     }
-    else
+    else if(dunp.typeOf(project.states.temp.selected) !== `null`)
     {
       const lang = dunp.getLang()
       const image = dunp.get(`#image`)

@@ -8,6 +8,7 @@ project.bricks.return = () =>
   const click = () =>
   {
     project.states.temp.locked = false
+    project.states.temp.selected = null
     project.states.temp.question = 0
     dunp.changeScene(`main`)
   }
