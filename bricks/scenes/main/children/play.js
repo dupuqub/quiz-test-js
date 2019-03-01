@@ -12,11 +12,6 @@ project.bricks.scenes.main.children.play = inner =>
     dunp.get(`#play`).classList.add(`fadeout`)
     dunp.get(`#lang`).classList.add(`fadeout`)
 
-    const {target} = event
-
-    target.classList.add(`pulse`)
-    target.classList.remove(`fadein`)
-
     setTimeout(() => dunp.changeScene(`question`), 500)
   }
 

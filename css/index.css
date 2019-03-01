@@ -61,12 +61,6 @@ body{overflow: hidden}
   -ms-user-select: none;
 }
 
-.pulse
-{
-  box-sizing: border-box;
-  border: calc(var(--u) * 90) solid #FFFFFF00;
-}
-
 /*....................................................................................................................*/
 
 .yellow, .red, .green{box-sizing: border-box}

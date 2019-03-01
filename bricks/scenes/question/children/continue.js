@@ -21,8 +21,17 @@ project.bricks.scenes.question.children.continue = () =>
       project.states.temp.selected = null
       project.states.temp.locked = false
 
-      if(project.states.temp.question === 4) dunp.changeScene(`ending`)
-      else dunp.changeScene(`question`)
+      const header = dunp.get(`#header`)
+      const zoneBox = dunp.get(`#zoneBox`)
+
+      if(header) header.classList.add(`fadeout`)
+      if(zoneBox) zoneBox.classList.add(`fadeout`)
+
+      setTimeout(() =>
+      {
+        if(project.states.temp.question === 4) dunp.changeScene(`ending`)
+        else dunp.changeScene(`question`)
+      }, 500)
     }
 
     else if(dunp.typeOf(project.states.temp.selected) !== `null`)
@@ -39,11 +48,8 @@ project.bricks.scenes.question.children.continue = () =>
       solution.innerHTML = `${question.painters[0]} ${lang.painted} ''${question.title}'' ${lang.in} ${question.year}.`
 
       target.innerHTML = lang.next
-      target.classList.add(`pulse`)
       target.classList.add(`yellow`)
       target.classList.remove(`fadein`)
-
-      setTimeout(() => target.classList.remove(`pulse`), 500)
 
       const selected = project.states.temp.selected
       const selectedIndex = question.painters.indexOf(selected)

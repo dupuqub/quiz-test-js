@@ -28,11 +28,6 @@ project.bricks.lang = inner =>
     dunp.get(`#play`).classList.add(`fadeout`)
     dunp.get(`#lang`).classList.add(`fadeout`)
 
-    const {target} = event
-
-    target.classList.add(`pulse`)
-    target.classList.remove(`fadein`)
-
     setTimeout(() => dunp.changeScene(sceneId), 500)
   }
 

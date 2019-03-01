@@ -11,8 +11,11 @@ project.bricks.return = () =>
     project.states.temp.selected = null
     project.states.temp.question = 0
 
-    dunp.get(`#header`).classList.add(`fadeout`)
-    dunp.get(`#zoneBox`).classList.add(`fadeout`)
+    const header = dunp.get(`#header`)
+    const zoneBox = dunp.get(`#zoneBox`)
+
+    if(header) header.classList.add(`fadeout`)
+    if(zoneBox) zoneBox.classList.add(`fadeout`)
 
     setTimeout(() => dunp.changeScene(`main`), 500)
   }

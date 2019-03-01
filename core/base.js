@@ -11,6 +11,7 @@ const project =
     {
       main: {children: {}},
       question: {children: {}},
+      ending: {children: {}},
     },
   },
   langs: {},
