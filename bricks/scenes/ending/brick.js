@@ -13,6 +13,7 @@ project.bricks.scenes.ending.brick = () =>
     project.states.temp.locked = false
     project.states.temp.selected = null
     project.states.temp.question = 0
+    project.states.temp.score = 0
 
     const header = dunp.get(`#header`)
     const message = dunp.get(`#message`)

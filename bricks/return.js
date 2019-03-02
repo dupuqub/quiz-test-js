@@ -10,6 +10,7 @@ project.bricks.return = () =>
     project.states.temp.locked = false
     project.states.temp.selected = null
     project.states.temp.question = 0
+    project.states.temp.score = 0
 
     const header = dunp.get(`#header`)
     const zoneBox = dunp.get(`#zoneBox`)
