@@ -41,7 +41,7 @@ project.bricks.scenes.ending.brick = () =>
     [
       {
         id: `header`,
-        classes: [`center`],
+        classes: [`center`, `fadein`],
         styles:
         [
           [`width`, `100%`],
@@ -62,7 +62,7 @@ project.bricks.scenes.ending.brick = () =>
       },
       {
         id: `message`,
-        classes: [`center`, `nonSelect`],
+        classes: [`center`, `nonSelect`, `fadein`],
         styles:
         [
           [`width`, `100%`],
@@ -77,8 +77,8 @@ project.bricks.scenes.ending.brick = () =>
           {
             styles:
             [
-              [`margin-left`, `calc(var(--u) * 150)`],
-              [`margin-right`, `calc(var(--u) * 150)`],
+              [`margin-left`, `calc(var(--u) * 100)`],
+              [`margin-right`, `calc(var(--u) * 100)`],
             ],
             inner: `${lang.achieved} ${score}!`,
           },
@@ -87,7 +87,7 @@ project.bricks.scenes.ending.brick = () =>
       },
       {
         id: `againBox`,
-        classes: [`center`],
+        classes: [`center`, `fadein`],
         styles:
         [
           [`width`, `100%`],
