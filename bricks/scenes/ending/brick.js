@@ -118,7 +118,7 @@ project.bricks.scenes.ending.brick = () =>
       },
       {
         id: `credits`,
-        classes: [`center`],
+        classes: [`center`, `nonSelect`, `fadein`],
         styles:
         [
           [`width`, `100%`],
