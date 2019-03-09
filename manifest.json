@@ -1,0 +1,11 @@
+
+{
+  "short_name": "Quiz",
+  "name": "The Quiz of ART",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A small proof of concept for a quiz.",
+  "theme_color": "#fff",
+  "orientation": "landscape"
+}
+
